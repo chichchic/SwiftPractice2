@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5383E41B23B9E7D000EA193F /* fountainpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5383E41A23B9E7D000EA193F /* fountainpen@2x.png */; };
 		53A83E4023B5DC2000556DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E3F23B5DC2000556DB1 /* AppDelegate.swift */; };
 		53A83E4223B5DC2000556DB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E4123B5DC2000556DB1 /* SceneDelegate.swift */; };
 		53A83E4723B5DC2000556DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A83E4523B5DC2000556DB1 /* Main.storyboard */; };
 		53A83E4A23B5DC2000556DB1 /* MyMemory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E4823B5DC2000556DB1 /* MyMemory.xcdatamodeld */; };
 		53A83E4C23B5DC2100556DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A83E4B23B5DC2100556DB1 /* Assets.xcassets */; };
 		53A83E4F23B5DC2100556DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A83E4D23B5DC2100556DB1 /* LaunchScreen.storyboard */; };
+		53A83E5723B731E600556DB1 /* MemoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E5623B731E600556DB1 /* MemoListVC.swift */; };
+		53A83E5D23B7324500556DB1 /* MemoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E5C23B7324500556DB1 /* MemoFormVC.swift */; };
+		53A83E5F23B7325100556DB1 /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E5E23B7325100556DB1 /* MemoReadVC.swift */; };
+		53A83E6323B732CF00556DB1 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E6223B732CF00556DB1 /* MemoCell.swift */; };
+		53A83E6523B732F700556DB1 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E6423B732F700556DB1 /* MemoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5383E41A23B9E7D000EA193F /* fountainpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fountainpen@2x.png"; sourceTree = "<group>"; };
 		53A83E3C23B5DC2000556DB1 /* MyMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A83E3F23B5DC2000556DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53A83E4123B5DC2000556DB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		53A83E4B23B5DC2100556DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53A83E4E23B5DC2100556DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53A83E5023B5DC2100556DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53A83E5623B731E600556DB1 /* MemoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListVC.swift; sourceTree = "<group>"; };
+		53A83E5C23B7324500556DB1 /* MemoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormVC.swift; sourceTree = "<group>"; };
+		53A83E5E23B7325100556DB1 /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
+		53A83E6223B732CF00556DB1 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoCell.swift; path = ../MemoCell.swift; sourceTree = "<group>"; };
+		53A83E6423B732F700556DB1 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,9 +49,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5383E41923B9E7B300EA193F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5383E41A23B9E7D000EA193F /* fountainpen@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		53A83E3323B5DC2000556DB1 = {
 			isa = PBXGroup;
 			children = (
+				5383E41923B9E7B300EA193F /* Resources */,
 				53A83E3E23B5DC2000556DB1 /* MyMemory */,
 				53A83E3D23B5DC2000556DB1 /* Products */,
 			);
@@ -56,9 +77,14 @@
 		53A83E3E23B5DC2000556DB1 /* MyMemory */ = {
 			isa = PBXGroup;
 			children = (
+				53A83E6223B732CF00556DB1 /* MemoCell.swift */,
+				53A83E5C23B7324500556DB1 /* MemoFormVC.swift */,
+				53A83E5E23B7325100556DB1 /* MemoReadVC.swift */,
 				53A83E3F23B5DC2000556DB1 /* AppDelegate.swift */,
 				53A83E4123B5DC2000556DB1 /* SceneDelegate.swift */,
 				53A83E4523B5DC2000556DB1 /* Main.storyboard */,
+				53A83E6423B732F700556DB1 /* MemoData.swift */,
+				53A83E5623B731E600556DB1 /* MemoListVC.swift */,
 				53A83E4B23B5DC2100556DB1 /* Assets.xcassets */,
 				53A83E4D23B5DC2100556DB1 /* LaunchScreen.storyboard */,
 				53A83E5023B5DC2100556DB1 /* Info.plist */,
@@ -127,6 +153,7 @@
 			files = (
 				53A83E4F23B5DC2100556DB1 /* LaunchScreen.storyboard in Resources */,
 				53A83E4C23B5DC2100556DB1 /* Assets.xcassets in Resources */,
+				5383E41B23B9E7D000EA193F /* fountainpen@2x.png in Resources */,
 				53A83E4723B5DC2000556DB1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A83E6323B732CF00556DB1 /* MemoCell.swift in Sources */,
+				53A83E6523B732F700556DB1 /* MemoData.swift in Sources */,
 				53A83E4A23B5DC2000556DB1 /* MyMemory.xcdatamodeld in Sources */,
+				53A83E5D23B7324500556DB1 /* MemoFormVC.swift in Sources */,
+				53A83E5F23B7325100556DB1 /* MemoReadVC.swift in Sources */,
 				53A83E4023B5DC2000556DB1 /* AppDelegate.swift in Sources */,
+				53A83E5723B731E600556DB1 /* MemoListVC.swift in Sources */,
 				53A83E4223B5DC2000556DB1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
