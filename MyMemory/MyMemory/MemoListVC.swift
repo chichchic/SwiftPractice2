@@ -34,18 +34,13 @@ class MemoListVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = self.appDelegate.memolist[indexPath.row]
         let cellId = row.image == nil ? "memoCell" : "memoCellWithImage"
+        let rCell = MemoCell()
       //  let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! MemoCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? MemoCell //옵셔널 처리하는 방법 모르겠음
-        
-        cell?.subject?.text = row.title
-        cell?.contents?.text = row.contents
-        cell?.img?.image = row.image
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        cell?.regdate?.text = formatter.string(from: row.regdate!)
-
-        return cell!
+        if let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? MemoCell {
+            return cell
+        } else {
+            return rCell
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
