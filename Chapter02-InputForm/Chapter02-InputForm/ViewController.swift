@@ -18,78 +18,77 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.title = "설정"
+        navigationItem.title = "설정"
         
         let lblEmail = UILabel(frame: CGRect(x: 30, y: 100, width: 100, height: 30))
         lblEmail.text = "이메일"
         lblEmail.font = UIFont.systemFont(ofSize: 14)
         
-        let lblUpdate = UILabel(frame: CGRect(x: 30, y: 150, width: 100, height: 30))
+        let lblUpdate = UILabel(frame: CGRect(x: lblEmail.frame.origin.x, y: lblEmail.frame.origin.y+50, width: 100, height: 30))
         lblUpdate.text = "자동갱신"
         lblUpdate.font = UIFont.systemFont(ofSize: 14)
         
-        let lblInterval = UILabel(frame: CGRect(x: 30, y: 200, width: 100, height: 30))
+        let lblInterval = UILabel(frame: CGRect(x: lblEmail.frame.origin.x, y: lblEmail.frame.origin.y+100, width: 100, height: 30))
         lblInterval.text = "갱신주기"
         lblInterval.font = UIFont.systemFont(ofSize: 14)
         
-        self.txtUpdate = UILabel(frame: CGRect(x: 250, y: 150, width: 100, height: 30))
-        self.txtUpdate.font = UIFont.systemFont(ofSize: 12)
-        self.txtUpdate.textColor = UIColor.red
-        self.txtUpdate.text = "갱신함"
+        txtUpdate = UILabel(frame: CGRect(x: lblEmail.frame.origin.x+220, y: 150, width: 100, height: 30))
+        txtUpdate.font = UIFont.systemFont(ofSize: 12)
+        txtUpdate.textColor = UIColor.red
+        txtUpdate.text = "갱신함"
         
-        self.txtInterval = UILabel(frame: CGRect(x: 250, y: 200, width: 100, height: 30))
-        self.txtInterval.font = UIFont.systemFont(ofSize: 12)
-        self.txtInterval.textColor = UIColor.red
-        self.txtInterval.text = "0분마다"
+        txtInterval = UILabel(frame: CGRect(x: txtUpdate.frame.origin.x, y: txtUpdate.frame.origin.y+50, width: 100, height: 30))
+        txtInterval.font = UIFont.systemFont(ofSize: 12)
+        txtInterval.textColor = UIColor.red
+        txtInterval.text = "0분마다"
         
-        self.view.addSubview(lblEmail)
-        self.view.addSubview(lblUpdate)
-        self.view.addSubview(lblInterval)
-        self.view.addSubview(txtUpdate)
-        self.view.addSubview(txtInterval)
+        view.addSubview(lblEmail)
+        view.addSubview(lblUpdate)
+        view.addSubview(lblInterval)
+        view.addSubview(txtUpdate)
+        view.addSubview(txtInterval)
         
-        self.paramEmail = UITextField(frame: CGRect(x: 120, y: 100, width: 220, height: 30))
-        self.paramEmail.font = UIFont.systemFont(ofSize: 13)
-        self.paramEmail.borderStyle = UITextField.BorderStyle.roundedRect
-        self.paramEmail.autocapitalizationType = .none
-        self.view.addSubview(paramEmail)
+        paramEmail = UITextField(frame: CGRect(x: lblEmail.frame.origin.x+90, y: 100, width: 220, height: 30))
+        paramEmail.font = UIFont.systemFont(ofSize: 13)
+        paramEmail.borderStyle = UITextField.BorderStyle.roundedRect
+        paramEmail.autocapitalizationType = .none
+        view.addSubview(paramEmail)
         
-        self.paramUpdate = UISwitch(frame: CGRect(x: 120, y: 150, width: 50, height: 30))
-        self.paramUpdate.setOn(true, animated: true)
-        self.view.addSubview(paramUpdate)
-        self.paramUpdate.addTarget(self, action: #selector(presentUpdateValue(_:)), for: .valueChanged)
+        paramUpdate = UISwitch(frame: CGRect(x: paramEmail.frame.origin.x, y: paramEmail.frame.origin.y+50, width: 50, height: 30))
+        paramUpdate.setOn(true, animated: true)
+        view.addSubview(paramUpdate)
+        paramUpdate.addTarget(self, action: #selector(presentUpdateValue(_:)), for: .valueChanged)
         
-        self.paramInterval = UIStepper(frame: CGRect(x: 120, y: 200, width: 50, height: 30))
-        self.paramInterval.minimumValue = 0
-        self.paramInterval.maximumValue = 100
-        self.paramInterval.stepValue = 1
-        self.paramInterval.value = 0
-        self.view.addSubview(paramInterval)
-        self.paramInterval.addTarget(self, action: #selector(presentIntervalValue), for: .valueChanged)
+        paramInterval = UIStepper(frame: CGRect(x: paramEmail.frame.origin.x, y: paramEmail.frame.origin.y+100, width: 50, height: 30))
+        paramInterval.minimumValue = 0
+        paramInterval.maximumValue = 100
+        paramInterval.stepValue = 1
+        paramInterval.value = 0
+        view.addSubview(paramInterval)
+        paramInterval.addTarget(self, action: #selector(presentIntervalValue), for: .valueChanged)
         
         let submitBtn = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(submit(_:)))
-        self.navigationItem.rightBarButtonItem = submitBtn
+        navigationItem.rightBarButtonItem = submitBtn
     }
 
     @objc
     func presentUpdateValue(_ sender: UISwitch) {
-        self.txtUpdate.text = (sender.isOn == true ? "갱신함" : "갱신하지 않음")
+        txtUpdate.text = (sender.isOn == true ? "갱신함" : "갱신하지 않음")
     }
     
     @objc
     func presentIntervalValue(_ sender: UIStepper) {
-        self.txtInterval.text = "\(Int(sender.value))분마다"
+        txtInterval.text = "\(Int(sender.value))분마다"
     }
     
     @objc
     func submit(_ sender: UIBarButtonItem) {
         let rvc = ReadViewController()
-        rvc.pEmail = self.paramEmail.text
-        rvc.pUpdate = self.paramUpdate.isOn
-        rvc.pInterval = self.paramInterval.value
+        rvc.pEmail = paramEmail.text
+        rvc.pUpdate = paramUpdate.isOn
+        rvc.pInterval = paramInterval.value
         
-        self.navigationController?.pushViewController(rvc, animated: true)
+        navigationController?.pushViewController(rvc, animated: true)
     }
 
 }
