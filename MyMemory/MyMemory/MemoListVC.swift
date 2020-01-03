@@ -15,11 +15,15 @@ class MemoListVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        if let revealVC = self.revealViewController() {
+            let btn = UIBarButtonItem()
+            btn.image = UIImage(named: "sidemenu.png")
+            btn.target = revealVC
+            btn.action = #selector(revealVC.revealToggle(_:))
+            
+            self.navigationItem.leftBarButtonItem = btn
+            self.view.addGestureRecognizer(revealVC.panGestureRecognizer())
+        }
     }
 
     // MARK: - Table view data source
@@ -37,8 +41,23 @@ class MemoListVC: UITableViewController {
         let rCell = MemoCell()
       //  let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! MemoCell
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? MemoCell {
+            cell.subject?.text = row.title
+            cell.contents?.text = row.contents
+            cell.img?.image = row.image
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            cell.regdate?.text = formatter.string(from: row.regdate!)
+            
             return cell
         } else {
+            rCell.subject?.text = row.title
+            rCell.contents?.text = row.contents
+            rCell.img?.image = row.image
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            rCell.regdate?.text = formatter.string(from: row.regdate!)
             return rCell
         }
     }
@@ -54,4 +73,5 @@ class MemoListVC: UITableViewController {
             vc?.param = self.appDelegate.memolist[selectedIndex]
         }
     }
+    
 }

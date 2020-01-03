@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		534EE32E23BF16F200285CAD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EE32D23BF16F200285CAD /* SWRevealViewController.m */; };
+		534EE33823BF173900285CAD /* icon05.png in Resources */ = {isa = PBXBuildFile; fileRef = 534EE32F23BF173900285CAD /* icon05.png */; };
+		534EE33923BF173900285CAD /* profile-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 534EE33023BF173900285CAD /* profile-bg.png */; };
+		534EE33A23BF173900285CAD /* icon02.png in Resources */ = {isa = PBXBuildFile; fileRef = 534EE33123BF173900285CAD /* icon02.png */; };
+		534EE33B23BF173900285CAD /* account@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 534EE33223BF173900285CAD /* account@2x.jpg */; };
+		534EE33C23BF173900285CAD /* icon06.png in Resources */ = {isa = PBXBuildFile; fileRef = 534EE33323BF173900285CAD /* icon06.png */; };
+		534EE33D23BF173900285CAD /* sidemenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 534EE33423BF173900285CAD /* sidemenu.png */; };
+		534EE33E23BF173900285CAD /* icon01.png in Resources */ = {isa = PBXBuildFile; fileRef = 534EE33523BF173900285CAD /* icon01.png */; };
+		534EE33F23BF173900285CAD /* icon03.png in Resources */ = {isa = PBXBuildFile; fileRef = 534EE33623BF173900285CAD /* icon03.png */; };
+		534EE34023BF173900285CAD /* icon04.png in Resources */ = {isa = PBXBuildFile; fileRef = 534EE33723BF173900285CAD /* icon04.png */; };
+		534EE34223BF19F400285CAD /* SideBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE34123BF19F400285CAD /* SideBarVC.swift */; };
+		534EE34423BF1E1200285CAD /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE34323BF1E1200285CAD /* ProfileVC.swift */; };
+		537F7F3023BCFDB200EF7D0D /* CSLogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F7F2F23BCFDB200EF7D0D /* CSLogButton.swift */; };
+		537F7F3423BCFE5E00EF7D0D /* warning-icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537F7F3123BCFE5E00EF7D0D /* warning-icon-60@2x.png */; };
+		537F7F3523BCFE5E00EF7D0D /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 537F7F3223BCFE5E00EF7D0D /* button-bg.png */; };
+		537F7F3623BCFE5E00EF7D0D /* memo-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537F7F3323BCFE5E00EF7D0D /* memo-background@2x.png */; };
 		5383E41B23B9E7D000EA193F /* fountainpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5383E41A23B9E7D000EA193F /* fountainpen@2x.png */; };
 		53A83E4023B5DC2000556DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E3F23B5DC2000556DB1 /* AppDelegate.swift */; };
 		53A83E4223B5DC2000556DB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A83E4123B5DC2000556DB1 /* SceneDelegate.swift */; };
@@ -22,6 +38,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		534EE32B23BF16F200285CAD /* MyMemory-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyMemory-Bridging-Header.h"; sourceTree = "<group>"; };
+		534EE32C23BF16F200285CAD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		534EE32D23BF16F200285CAD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		534EE32F23BF173900285CAD /* icon05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon05.png; sourceTree = "<group>"; };
+		534EE33023BF173900285CAD /* profile-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-bg.png"; sourceTree = "<group>"; };
+		534EE33123BF173900285CAD /* icon02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon02.png; sourceTree = "<group>"; };
+		534EE33223BF173900285CAD /* account@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "account@2x.jpg"; sourceTree = "<group>"; };
+		534EE33323BF173900285CAD /* icon06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon06.png; sourceTree = "<group>"; };
+		534EE33423BF173900285CAD /* sidemenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenu.png; sourceTree = "<group>"; };
+		534EE33523BF173900285CAD /* icon01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon01.png; sourceTree = "<group>"; };
+		534EE33623BF173900285CAD /* icon03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon03.png; sourceTree = "<group>"; };
+		534EE33723BF173900285CAD /* icon04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon04.png; sourceTree = "<group>"; };
+		534EE34123BF19F400285CAD /* SideBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarVC.swift; sourceTree = "<group>"; };
+		534EE34323BF1E1200285CAD /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		537F7F2F23BCFDB200EF7D0D /* CSLogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLogButton.swift; sourceTree = "<group>"; };
+		537F7F3123BCFE5E00EF7D0D /* warning-icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warning-icon-60@2x.png"; sourceTree = "<group>"; };
+		537F7F3223BCFE5E00EF7D0D /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg.png"; sourceTree = "<group>"; };
+		537F7F3323BCFE5E00EF7D0D /* memo-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "memo-background@2x.png"; sourceTree = "<group>"; };
 		5383E41A23B9E7D000EA193F /* fountainpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fountainpen@2x.png"; sourceTree = "<group>"; };
 		53A83E3C23B5DC2000556DB1 /* MyMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A83E3F23B5DC2000556DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +86,19 @@
 		5383E41923B9E7B300EA193F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				537F7F3223BCFE5E00EF7D0D /* button-bg.png */,
+				537F7F3323BCFE5E00EF7D0D /* memo-background@2x.png */,
+				537F7F3123BCFE5E00EF7D0D /* warning-icon-60@2x.png */,
 				5383E41A23B9E7D000EA193F /* fountainpen@2x.png */,
+				534EE33223BF173900285CAD /* account@2x.jpg */,
+				534EE33523BF173900285CAD /* icon01.png */,
+				534EE33123BF173900285CAD /* icon02.png */,
+				534EE33623BF173900285CAD /* icon03.png */,
+				534EE33723BF173900285CAD /* icon04.png */,
+				534EE32F23BF173900285CAD /* icon05.png */,
+				534EE33323BF173900285CAD /* icon06.png */,
+				534EE33023BF173900285CAD /* profile-bg.png */,
+				534EE33423BF173900285CAD /* sidemenu.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -77,18 +123,24 @@
 		53A83E3E23B5DC2000556DB1 /* MyMemory */ = {
 			isa = PBXGroup;
 			children = (
+				534EE32C23BF16F200285CAD /* SWRevealViewController.h */,
+				534EE32D23BF16F200285CAD /* SWRevealViewController.m */,
 				53A83E6223B732CF00556DB1 /* MemoCell.swift */,
 				53A83E5C23B7324500556DB1 /* MemoFormVC.swift */,
+				537F7F2F23BCFDB200EF7D0D /* CSLogButton.swift */,
 				53A83E5E23B7325100556DB1 /* MemoReadVC.swift */,
 				53A83E3F23B5DC2000556DB1 /* AppDelegate.swift */,
 				53A83E4123B5DC2000556DB1 /* SceneDelegate.swift */,
 				53A83E4523B5DC2000556DB1 /* Main.storyboard */,
+				534EE34123BF19F400285CAD /* SideBarVC.swift */,
+				534EE34323BF1E1200285CAD /* ProfileVC.swift */,
 				53A83E6423B732F700556DB1 /* MemoData.swift */,
 				53A83E5623B731E600556DB1 /* MemoListVC.swift */,
 				53A83E4B23B5DC2100556DB1 /* Assets.xcassets */,
 				53A83E4D23B5DC2100556DB1 /* LaunchScreen.storyboard */,
 				53A83E5023B5DC2100556DB1 /* Info.plist */,
 				53A83E4823B5DC2000556DB1 /* MyMemory.xcdatamodeld */,
+				534EE32B23BF16F200285CAD /* MyMemory-Bridging-Header.h */,
 			);
 			path = MyMemory;
 			sourceTree = "<group>";
@@ -125,6 +177,7 @@
 				TargetAttributes = {
 					53A83E3B23B5DC2000556DB1 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -151,10 +204,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				534EE33C23BF173900285CAD /* icon06.png in Resources */,
+				537F7F3623BCFE5E00EF7D0D /* memo-background@2x.png in Resources */,
 				53A83E4F23B5DC2100556DB1 /* LaunchScreen.storyboard in Resources */,
+				537F7F3423BCFE5E00EF7D0D /* warning-icon-60@2x.png in Resources */,
+				534EE33823BF173900285CAD /* icon05.png in Resources */,
+				534EE33A23BF173900285CAD /* icon02.png in Resources */,
+				534EE33923BF173900285CAD /* profile-bg.png in Resources */,
 				53A83E4C23B5DC2100556DB1 /* Assets.xcassets in Resources */,
 				5383E41B23B9E7D000EA193F /* fountainpen@2x.png in Resources */,
+				534EE33F23BF173900285CAD /* icon03.png in Resources */,
+				534EE34023BF173900285CAD /* icon04.png in Resources */,
+				534EE33D23BF173900285CAD /* sidemenu.png in Resources */,
+				537F7F3523BCFE5E00EF7D0D /* button-bg.png in Resources */,
+				534EE33E23BF173900285CAD /* icon01.png in Resources */,
 				53A83E4723B5DC2000556DB1 /* Main.storyboard in Resources */,
+				534EE33B23BF173900285CAD /* account@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,12 +230,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537F7F3023BCFDB200EF7D0D /* CSLogButton.swift in Sources */,
+				534EE34223BF19F400285CAD /* SideBarVC.swift in Sources */,
 				53A83E6323B732CF00556DB1 /* MemoCell.swift in Sources */,
 				53A83E6523B732F700556DB1 /* MemoData.swift in Sources */,
 				53A83E4A23B5DC2000556DB1 /* MyMemory.xcdatamodeld in Sources */,
+				534EE34423BF1E1200285CAD /* ProfileVC.swift in Sources */,
 				53A83E5D23B7324500556DB1 /* MemoFormVC.swift in Sources */,
 				53A83E5F23B7325100556DB1 /* MemoReadVC.swift in Sources */,
 				53A83E4023B5DC2000556DB1 /* AppDelegate.swift in Sources */,
+				534EE32E23BF16F200285CAD /* SWRevealViewController.m in Sources */,
 				53A83E5723B731E600556DB1 /* MemoListVC.swift in Sources */,
 				53A83E4223B5DC2000556DB1 /* SceneDelegate.swift in Sources */,
 			);
@@ -316,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S8D2S365X;
 				INFOPLIST_FILE = MyMemory/Info.plist;
@@ -325,6 +395,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chichchic.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMemory/MyMemory-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -334,6 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7S8D2S365X;
 				INFOPLIST_FILE = MyMemory/Info.plist;
@@ -343,6 +416,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.chichchic.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyMemory/MyMemory-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
