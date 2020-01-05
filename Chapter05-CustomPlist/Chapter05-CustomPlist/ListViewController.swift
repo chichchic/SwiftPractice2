@@ -15,7 +15,7 @@ class ListViewController: UITableViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet var married: UISwitch!
     @IBOutlet var account: UITextField!
     
-    var accountlist = [String]()
+    var accountlist = Set<String>()
     
     var defaultPList: NSDictionary!
     
@@ -113,7 +113,7 @@ class ListViewController: UITableViewController, UIPickerViewDelegate, UIPickerV
         toolbar.setItems([new, flexSpace, done], animated: true)
         
         let accountlist = plist.array(forKey: "accountlist") as? [String] ?? [String]()
-        self.accountlist = accountlist
+        self.accountlist = Set(accountlist)
         
         if let account = plist.string(forKey: "selectedAccount") {
             self.account.text = account
@@ -169,7 +169,7 @@ class ListViewController: UITableViewController, UIPickerViewDelegate, UIPickerV
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (_) in
             if let account = alert.textFields?[0].text {
-                self.accountlist.append(account)
+                self.accountlist.insert(account) // HERE
                 self.account.text = account
                 
                 self.name.text = ""
@@ -178,7 +178,9 @@ class ListViewController: UITableViewController, UIPickerViewDelegate, UIPickerV
                 
                 let plist = UserDefaults.standard
                 
-                plist.set(self.accountlist, forKey: "accountlist")
+                let tempList = Array(self.accountlist)
+                
+                plist.set(tempList, forKey: "accountlist")
                 plist.set(account, forKey: "selectedAccount")
                 plist.synchronize()
                 
@@ -212,11 +214,13 @@ class ListViewController: UITableViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.accountlist[row]
+        let tempList = Array(accountlist) //Here
+        return tempList[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let account = self.accountlist[row]
+        let tempList = Array(accountlist) //Here
+        let account = tempList[row]
         self.account.text = account
         
         let plist = UserDefaults.standard

@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tutorial MasterVC-->
         <scene sceneID="OE4-rM-E7E">
             <objects>
-                <viewController storyboardIdentifier="MasterVC" id="WR2-EL-WDT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MasterVC" id="WR2-EL-WDT" customClass="TutorialMasterVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H2L-ww-ltw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,9 @@
                                     <constraint firstAttribute="height" constant="30" id="ede-hB-g2o"/>
                                 </constraints>
                                 <state key="normal" title="시작하기"/>
+                                <connections>
+                                    <action selector="close:" destination="WR2-EL-WDT" eventType="touchUpInside" id="ITg-nQ-qnn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

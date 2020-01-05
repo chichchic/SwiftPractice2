@@ -15,7 +15,7 @@ class TutorialMasterVC: UIViewController, UIPageViewControllerDataSource {
     var contentImages = ["Page0", "Page1", "Page2", "Page3"]
     
     override func viewDidLoad() {
-        self.pageVC = self.instanceTutorialVC(name: "PageVC") as! UIPageViewController
+        self.pageVC = self.instanceTutorialVC(name: "PageVC") as? UIPageViewController
         self.pageVC.dataSource = self
         
         let startContentVC = self.getContentVC(atIndex: 0)!

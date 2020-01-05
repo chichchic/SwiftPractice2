@@ -99,6 +99,7 @@
 				534EE3AF23C0D83E00285CAD /* Tutorial.storyboard */,
 				534EE3B323C0DA7F00285CAD /* TutorialContentsVC.swift */,
 				534EE3B623C0DB9500285CAD /* TutorialMasterVC.swift */,
+				534EE3B123C0DA0100285CAD /* Utils.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -159,7 +160,6 @@
 				53A83E5623B731E600556DB1 /* MemoListVC.swift */,
 				534EE3AD23C0349C00285CAD /* UserInfoManager.swift */,
 				53A83E4B23B5DC2100556DB1 /* Assets.xcassets */,
-				534EE3B123C0DA0100285CAD /* Utils.swift */,
 				53A83E4D23B5DC2100556DB1 /* LaunchScreen.storyboard */,
 				53A83E5023B5DC2100556DB1 /* Info.plist */,
 				53A83E4823B5DC2000556DB1 /* MyMemory.xcdatamodeld */,

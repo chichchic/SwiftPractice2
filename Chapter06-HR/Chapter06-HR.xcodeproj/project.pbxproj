@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		534EE3FD23C2115A00285CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE3FC23C2115A00285CAD /* AppDelegate.swift */; };
+		534EE3FF23C2115A00285CAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE3FE23C2115A00285CAD /* SceneDelegate.swift */; };
+		534EE40123C2115A00285CAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE40023C2115A00285CAD /* ViewController.swift */; };
+		534EE40423C2115A00285CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534EE40223C2115A00285CAD /* Main.storyboard */; };
+		534EE40623C2115B00285CAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534EE40523C2115B00285CAD /* Assets.xcassets */; };
+		534EE40923C2115B00285CAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534EE40723C2115B00285CAD /* LaunchScreen.storyboard */; };
+		534EE41223C2118200285CAD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 534EE41123C2118200285CAD /* libsqlite3.tbd */; };
+		534EE41F23C211A700285CAD /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EE41523C211A600285CAD /* FMDatabaseAdditions.m */; };
+		534EE42023C211A700285CAD /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EE41723C211A600285CAD /* FMDatabase.m */; };
+		534EE42123C211A700285CAD /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EE41B23C211A600285CAD /* FMDatabaseQueue.m */; };
+		534EE42223C211A700285CAD /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EE41C23C211A700285CAD /* FMDatabasePool.m */; };
+		534EE42323C211A700285CAD /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 534EE41E23C211A700285CAD /* FMResultSet.m */; };
+		534EE42623C212CE00285CAD /* DepartmentListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE42523C212CE00285CAD /* DepartmentListVC.swift */; };
+		534EE42823C212DC00285CAD /* EmployeeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE42723C212DC00285CAD /* EmployeeListVC.swift */; };
+		534EE42A23C213B000285CAD /* hr.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 534EE42923C213B000285CAD /* hr.sqlite */; };
+		534EE42C23C219E100285CAD /* DepartmentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE42B23C219E100285CAD /* DepartmentDAO.swift */; };
+		534EE42E23C21FAF00285CAD /* EmployeeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE42D23C21FAF00285CAD /* EmployeeDAO.swift */; };
+		534EE43023C22BBB00285CAD /* DepartPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE42F23C22BBB00285CAD /* DepartPickerVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		534EE3F923C2115A00285CAD /* Chapter06-HR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter06-HR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		534EE3FC23C2115A00285CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		534EE3FE23C2115A00285CAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		534EE40023C2115A00285CAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		534EE40323C2115A00285CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		534EE40523C2115B00285CAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		534EE40823C2115B00285CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		534EE40A23C2115B00285CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		534EE41123C2118200285CAD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		534EE41423C211A600285CAD /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		534EE41523C211A600285CAD /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		534EE41623C211A600285CAD /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		534EE41723C211A600285CAD /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		534EE41823C211A600285CAD /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		534EE41923C211A600285CAD /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		534EE41A23C211A600285CAD /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		534EE41B23C211A600285CAD /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		534EE41C23C211A700285CAD /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		534EE41D23C211A700285CAD /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		534EE41E23C211A700285CAD /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		534EE42423C211C000285CAD /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		534EE42523C212CE00285CAD /* DepartmentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListVC.swift; sourceTree = "<group>"; };
+		534EE42723C212DC00285CAD /* EmployeeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListVC.swift; sourceTree = "<group>"; };
+		534EE42923C213B000285CAD /* hr.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hr.sqlite; sourceTree = "<group>"; };
+		534EE42B23C219E100285CAD /* DepartmentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDAO.swift; sourceTree = "<group>"; };
+		534EE42D23C21FAF00285CAD /* EmployeeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDAO.swift; sourceTree = "<group>"; };
+		534EE42F23C22BBB00285CAD /* DepartPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartPickerVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		534EE3F623C2115A00285CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534EE41223C2118200285CAD /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		534EE3F023C2115A00285CAD = {
+			isa = PBXGroup;
+			children = (
+				534EE41323C2119300285CAD /* fmdb */,
+				534EE3FB23C2115A00285CAD /* Chapter06-HR */,
+				534EE3FA23C2115A00285CAD /* Products */,
+				534EE41023C2118200285CAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		534EE3FA23C2115A00285CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				534EE3F923C2115A00285CAD /* Chapter06-HR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		534EE3FB23C2115A00285CAD /* Chapter06-HR */ = {
+			isa = PBXGroup;
+			children = (
+				534EE3FC23C2115A00285CAD /* AppDelegate.swift */,
+				534EE3FE23C2115A00285CAD /* SceneDelegate.swift */,
+				534EE40023C2115A00285CAD /* ViewController.swift */,
+				534EE40223C2115A00285CAD /* Main.storyboard */,
+				534EE42523C212CE00285CAD /* DepartmentListVC.swift */,
+				534EE42723C212DC00285CAD /* EmployeeListVC.swift */,
+				534EE42F23C22BBB00285CAD /* DepartPickerVC.swift */,
+				534EE42B23C219E100285CAD /* DepartmentDAO.swift */,
+				534EE42D23C21FAF00285CAD /* EmployeeDAO.swift */,
+				534EE40523C2115B00285CAD /* Assets.xcassets */,
+				534EE40723C2115B00285CAD /* LaunchScreen.storyboard */,
+				534EE40A23C2115B00285CAD /* Info.plist */,
+			);
+			path = "Chapter06-HR";
+			sourceTree = "<group>";
+		};
+		534EE41023C2118200285CAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				534EE41123C2118200285CAD /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		534EE41323C2119300285CAD /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				534EE42923C213B000285CAD /* hr.sqlite */,
+				534EE41823C211A600285CAD /* FMDatabase.h */,
+				534EE41723C211A600285CAD /* FMDatabase.m */,
+				534EE41A23C211A600285CAD /* FMDatabaseAdditions.h */,
+				534EE41523C211A600285CAD /* FMDatabaseAdditions.m */,
+				534EE41923C211A600285CAD /* FMDatabasePool.h */,
+				534EE41C23C211A700285CAD /* FMDatabasePool.m */,
+				534EE41423C211A600285CAD /* FMDatabaseQueue.h */,
+				534EE41B23C211A600285CAD /* FMDatabaseQueue.m */,
+				534EE41D23C211A700285CAD /* FMDB.h */,
+				534EE41623C211A600285CAD /* FMResultSet.h */,
+				534EE41E23C211A700285CAD /* FMResultSet.m */,
+				534EE42423C211C000285CAD /* Bridging-Header.h */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		534EE3F823C2115A00285CAD /* Chapter06-HR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 534EE40D23C2115B00285CAD /* Build configuration list for PBXNativeTarget "Chapter06-HR" */;
+			buildPhases = (
+				534EE3F523C2115A00285CAD /* Sources */,
+				534EE3F623C2115A00285CAD /* Frameworks */,
+				534EE3F723C2115A00285CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chapter06-HR";
+			productName = "Chapter06-HR";
+			productReference = 534EE3F923C2115A00285CAD /* Chapter06-HR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		534EE3F123C2115A00285CAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "박시현";
+				TargetAttributes = {
+					534EE3F823C2115A00285CAD = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 534EE3F423C2115A00285CAD /* Build configuration list for PBXProject "Chapter06-HR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 534EE3F023C2115A00285CAD;
+			productRefGroup = 534EE3FA23C2115A00285CAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				534EE3F823C2115A00285CAD /* Chapter06-HR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		534EE3F723C2115A00285CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534EE40923C2115B00285CAD /* LaunchScreen.storyboard in Resources */,
+				534EE40623C2115B00285CAD /* Assets.xcassets in Resources */,
+				534EE40423C2115A00285CAD /* Main.storyboard in Resources */,
+				534EE42A23C213B000285CAD /* hr.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		534EE3F523C2115A00285CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				534EE42E23C21FAF00285CAD /* EmployeeDAO.swift in Sources */,
+				534EE40123C2115A00285CAD /* ViewController.swift in Sources */,
+				534EE42623C212CE00285CAD /* DepartmentListVC.swift in Sources */,
+				534EE42C23C219E100285CAD /* DepartmentDAO.swift in Sources */,
+				534EE42823C212DC00285CAD /* EmployeeListVC.swift in Sources */,
+				534EE3FD23C2115A00285CAD /* AppDelegate.swift in Sources */,
+				534EE43023C22BBB00285CAD /* DepartPickerVC.swift in Sources */,
+				534EE3FF23C2115A00285CAD /* SceneDelegate.swift in Sources */,
+				534EE42023C211A700285CAD /* FMDatabase.m in Sources */,
+				534EE42223C211A700285CAD /* FMDatabasePool.m in Sources */,
+				534EE41F23C211A700285CAD /* FMDatabaseAdditions.m in Sources */,
+				534EE42323C211A700285CAD /* FMResultSet.m in Sources */,
+				534EE42123C211A700285CAD /* FMDatabaseQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		534EE40223C2115A00285CAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				534EE40323C2115A00285CAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		534EE40723C2115B00285CAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				534EE40823C2115B00285CAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		534EE40B23C2115B00285CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		534EE40C23C2115B00285CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		534EE40E23C2115B00285CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S8D2S365X;
+				INFOPLIST_FILE = "Chapter06-HR/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chichchic.Chapter06-HR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		534EE40F23C2115B00285CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7S8D2S365X;
+				INFOPLIST_FILE = "Chapter06-HR/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chichchic.Chapter06-HR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		534EE3F423C2115A00285CAD /* Build configuration list for PBXProject "Chapter06-HR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				534EE40B23C2115B00285CAD /* Debug */,
+				534EE40C23C2115B00285CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		534EE40D23C2115B00285CAD /* Build configuration list for PBXNativeTarget "Chapter06-HR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				534EE40E23C2115B00285CAD /* Debug */,
+				534EE40F23C2115B00285CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 534EE3F123C2115A00285CAD /* Project object */;
+}

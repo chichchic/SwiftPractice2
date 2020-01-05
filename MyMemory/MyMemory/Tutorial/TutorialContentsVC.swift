@@ -21,9 +21,10 @@ class TutorialContentsVC: UIViewController {
         super.viewDidLoad()
 
         self.titleLabel.text = self.titleText
-        self.titleLabel.sizeToFit
+        self.titleLabel.sizeToFit()
         
         self.bgImageView.image = UIImage(named: self.imageFile)
+        self.view.bringSubviewToFront(self.titleLabel)
     }
     
 

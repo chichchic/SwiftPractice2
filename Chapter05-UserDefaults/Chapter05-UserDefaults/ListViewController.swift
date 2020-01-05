@@ -67,25 +67,26 @@ class ListViewController: UITableViewController {
         return super.tableView(tableView, numberOfRowsInSection: section)
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if indexPath.row == 0 {
-//            let alert = UIAlertController(title: nil, message: "이름을 입력하세요", preferredStyle: .alert)
-//
-//            alert.addTextField() {
-//                $0.text = self.name.text
-//            }
-//
-//            alert.addAction(UIAlertAction(title: "OK", style: .default) { (_) in
-//                let value = alert.textFields?[0].text
-//
-//                let plist = UserDefaults.standard
-//                plist.setValue(value, forKey: "name")
-//
-//                plist.synchronize()
-//
-//                self.name.text = value
-//            })
-//
-//            self.present(alert, animated: false, completion: nil)
-//        }
+        
+        if tableView.cellForRow(at: indexPath) == self.name.superview?.superview {
+            let alert = UIAlertController(title: nil, message: "이름을 입력하세요", preferredStyle: .alert)
+
+            alert.addTextField() {
+                $0.text = self.name.text
+            }
+
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { (_) in
+                let value = alert.textFields?[0].text
+
+                let plist = UserDefaults.standard
+                plist.setValue(value, forKey: "name")
+
+                plist.synchronize()
+
+                self.name.text = value
+            })
+
+            self.present(alert, animated: false, completion: nil)
+        }
     }
 }

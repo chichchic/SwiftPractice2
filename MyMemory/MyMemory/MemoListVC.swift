@@ -66,6 +66,7 @@ class MemoListVC: UITableViewController {
         let ud = UserDefaults.standard
         if ud.bool(forKey: UserInfoKey.tutorial) == false {
             let vc = self.instanceTutorialVC(name: "MasterVC")
+            vc?.modalPresentationStyle = .fullScreen
             self.present(vc!, animated: false)
             
             return
