@@ -48,12 +48,23 @@ class DepartmentListVC: UITableViewController {
         return cell!
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let departCd = self.departList[indexPath.row].departCd
+        
+        let infoVC = self.storyboard?.instantiateViewController(withIdentifier: "DEPART_INFO")
+        
+        if let _infoVC = infoVC as? DepartmentInfoVC {
+            _infoVC.departCd = departCd
+            self.navigationController?.pushViewController(_infoVC, animated: true)
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return UITableViewCell.EditingStyle.delete
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        let departCd = self.departList[indexPath].departCd
+        let departCd = self.departList[indexPath.row].departCd
         
         if departDAO.remove(departCd: departCd) {
             self.departList.remove(at: indexPath.row)

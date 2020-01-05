@@ -85,13 +85,13 @@ class DepartmentDAO {
                 INSERT INTO department (depart_title, depart_addr)
                 VALUES ( ? , ? )
             """
-            guard title != nil && title?.isEmpty == fasle else {
+            guard title != nil && title?.isEmpty == false else {
                 return false
             }
-            guard addr != nil && addr?.isEmpty == fasle else {
+            guard addr != nil && addr?.isEmpty == false else {
                 return false
             }
-            try self.fmbd.executeQueryUpdate(sql, values: [title, addr])
+            try self.fmbd.executeUpdate(sql, values: [title!, addr!])
             return true
         } catch let error as NSError {
             print("Insert Error: \(error.localizedDescription)")

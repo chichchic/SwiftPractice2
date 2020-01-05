@@ -32,7 +32,7 @@ struct EmployeeVO {
 
 class EmployeeDAO {
     
-    lazy var fmbd: FMDatabase! = {
+    lazy var fmdb: FMDatabase! = {
         let fileMgr = FileManager.default
         let docPath = fileMgr.urls(for: .documentDirectory, in: .userDomainMask).first
         let dbPath = docPath!.appendingPathComponent("hr.sqlite").path
@@ -47,11 +47,11 @@ class EmployeeDAO {
     }()
     
     init() {
-        self.fmbd.open()
+        self.fmdb.open()
     }
     
     deinit {
-        self.fmbd.close()
+        self.fmdb.close()
     }
     
     func find(departCd: Int = 0) -> [EmployeeVO] {
@@ -69,7 +69,7 @@ class EmployeeDAO {
                 ORDER BY employee.depart_cd ASC
             """
             
-            let rs = try self.fmbd.executeQuery(sql, values: nil)
+            let rs = try self.fmdb.executeQuery(sql, values: nil)
             
             while rs.next() {
                 var record = EmployeeVO()
@@ -99,18 +99,18 @@ class EmployeeDAO {
             WHERE emp_cd = ?
         """
         
-        let rs = self.fmbd.executeQuery(sql, withArgumentsIn: [empCd])
+        let rs = self.fmdb.executeQuery(sql, withArgumentsIn: [empCd])
         
         if let _rs = rs {
             _rs.next()
             
             var record = EmployeeVO()
-            record.empCd = Int(rs.int(forColumn: "emp_cd"))
-            record.empName = rs.string(forColumn: "emp_name")!
-            record.joinDate = rs.string(forColumn: "join_date")!
-            record.departTitle = rs.string(forColumn: "depart_title")!
+            record.empCd = Int(_rs.int(forColumn: "emp_cd"))
+            record.empName = _rs.string(forColumn: "emp_name")!
+            record.joinDate = _rs.string(forColumn: "join_date")!
+            record.departTitle = _rs.string(forColumn: "depart_title")!
             
-            let cd = Int(rs.int(forColumn: "state_cd"))
+            let cd = Int(_rs.int(forColumn: "state_cd"))
             record.stateCd = EmpStateType(rawValue: cd)!
             
             return record
@@ -131,7 +131,7 @@ class EmployeeDAO {
             params.append(param.stateCd.rawValue)
             params.append(param.departCd)
             
-            try self.fmbd.excuteUpdate(sql, values: params)
+            try self.fmdb.executeUpdate(sql, values: params)
             
             return true
         } catch let error as NSError {
@@ -143,11 +143,27 @@ class EmployeeDAO {
     func remove(empCd: Int) -> Bool {
         do {
             let sql = "DELETE FROM employee WHERE emp_cd= ?"
-            try self.fmbd.executeUpdate(sql, values: [empCd])
+            try self.fmdb.executeUpdate(sql, values: [empCd])
             return true
         } catch let error as NSError {
             print("DELETE Error: \(error.localizedDescription)")
                        return false
+        }
+    }
+    
+    func editState(empCd: Int, stateCd: EmpStateType) -> Bool {
+        do {
+            let sql = "UPDATE Employee SET state_cd = ? WHERE emp_cd = ? "
+            var params = [Any]()
+            
+            params.append(stateCd.rawValue)
+            params.append(empCd)
+            
+            try self.fmdb.executeUpdate(sql, values: params)
+            return true
+        } catch let error as NSError {
+            print("UPDATE Error: \(error.localizedDescription)")
+            return false
         }
     }
 }

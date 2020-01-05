@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pGF-7O-eEQ">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -164,7 +164,7 @@
         <!--부서 상세정보-->
         <scene sceneID="WGL-bJ-PcM">
             <objects>
-                <tableViewController storyboardIdentifier="DEPART_INFO" id="fzK-Va-2vd" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DEPART_INFO" id="fzK-Va-2vd" customClass="DepartmentInfoVC" customModule="Chapter06_HR" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="phK-sC-XAe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -232,7 +232,7 @@
         <scene sceneID="Uaw-IR-ciB">
             <objects>
                 <navigationController id="dQw-68-vj1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="emplyee" id="si5-ms-Ra6"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="employee" id="si5-ms-Ra6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aWl-kO-vAT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -248,6 +248,6 @@
     </scenes>
     <resources>
         <image name="depart" width="30" height="30"/>
-        <image name="emplyee" width="30" height="30"/>
+        <image name="employee" width="30" height="30"/>
     </resources>
 </document>

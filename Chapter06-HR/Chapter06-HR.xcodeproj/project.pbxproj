@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		532AFF6D23C2323200650ED8 /* DepartmentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532AFF6C23C2323200650ED8 /* DepartmentInfoVC.swift */; };
 		534EE3FD23C2115A00285CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE3FC23C2115A00285CAD /* AppDelegate.swift */; };
 		534EE3FF23C2115A00285CAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE3FE23C2115A00285CAD /* SceneDelegate.swift */; };
 		534EE40123C2115A00285CAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EE40023C2115A00285CAD /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		532AFF6C23C2323200650ED8 /* DepartmentInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentInfoVC.swift; sourceTree = "<group>"; };
 		534EE3F923C2115A00285CAD /* Chapter06-HR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter06-HR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		534EE3FC23C2115A00285CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534EE3FE23C2115A00285CAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,13 +50,13 @@
 		534EE41C23C211A700285CAD /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		534EE41D23C211A700285CAD /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		534EE41E23C211A700285CAD /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		534EE42423C211C000285CAD /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		534EE42523C212CE00285CAD /* DepartmentListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentListVC.swift; sourceTree = "<group>"; };
 		534EE42723C212DC00285CAD /* EmployeeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListVC.swift; sourceTree = "<group>"; };
 		534EE42923C213B000285CAD /* hr.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = hr.sqlite; sourceTree = "<group>"; };
 		534EE42B23C219E100285CAD /* DepartmentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDAO.swift; sourceTree = "<group>"; };
 		534EE42D23C21FAF00285CAD /* EmployeeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDAO.swift; sourceTree = "<group>"; };
 		534EE42F23C22BBB00285CAD /* DepartPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartPickerVC.swift; sourceTree = "<group>"; };
+		535BEF6823C2395C00FFBB5E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		534EE3F023C2115A00285CAD = {
 			isa = PBXGroup;
 			children = (
+				535BEF6823C2395C00FFBB5E /* Bridging-Header.h */,
 				534EE41323C2119300285CAD /* fmdb */,
 				534EE3FB23C2115A00285CAD /* Chapter06-HR */,
 				534EE3FA23C2115A00285CAD /* Products */,
@@ -95,6 +98,7 @@
 				534EE40023C2115A00285CAD /* ViewController.swift */,
 				534EE40223C2115A00285CAD /* Main.storyboard */,
 				534EE42523C212CE00285CAD /* DepartmentListVC.swift */,
+				532AFF6C23C2323200650ED8 /* DepartmentInfoVC.swift */,
 				534EE42723C212DC00285CAD /* EmployeeListVC.swift */,
 				534EE42F23C22BBB00285CAD /* DepartPickerVC.swift */,
 				534EE42B23C219E100285CAD /* DepartmentDAO.swift */,
@@ -129,7 +133,6 @@
 				534EE41D23C211A700285CAD /* FMDB.h */,
 				534EE41623C211A600285CAD /* FMResultSet.h */,
 				534EE41E23C211A700285CAD /* FMResultSet.m */,
-				534EE42423C211C000285CAD /* Bridging-Header.h */,
 			);
 			path = fmdb;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				534EE40123C2115A00285CAD /* ViewController.swift in Sources */,
 				534EE42623C212CE00285CAD /* DepartmentListVC.swift in Sources */,
 				534EE42C23C219E100285CAD /* DepartmentDAO.swift in Sources */,
+				532AFF6D23C2323200650ED8 /* DepartmentInfoVC.swift in Sources */,
 				534EE42823C212DC00285CAD /* EmployeeListVC.swift in Sources */,
 				534EE3FD23C2115A00285CAD /* AppDelegate.swift in Sources */,
 				534EE43023C22BBB00285CAD /* DepartPickerVC.swift in Sources */,
@@ -300,6 +304,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -353,6 +358,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};

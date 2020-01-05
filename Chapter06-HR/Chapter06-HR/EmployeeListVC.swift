@@ -12,13 +12,15 @@ class EmployeeListVC: UITableViewController {
 
     var empList: [EmployeeVO]!
     var empDAO = EmployeeDAO()
+    var loadingImg: UIImageView!
+    var bgCircle: UIView!
     
     func initUI() {
         let navTitle = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 60))
         navTitle.numberOfLines = 2
         navTitle.textAlignment = .center
         navTitle.font = UIFont.systemFont(ofSize: 14)
-        navTitle.text = "사원 목록 \n" + "총 \(self.departList.count)개"
+        navTitle.text = "사원 목록 \n" + "총 \(self.empList.count)개"
         
         self.navigationItem.titleView = navTitle
         self.navigationItem.leftBarButtonItem = self.editButtonItem
@@ -29,6 +31,38 @@ class EmployeeListVC: UITableViewController {
     override func viewDidLoad() {
         self.empList = self.empDAO.find()
         self.initUI()
+        
+        self.refreshControl = UIRefreshControl()
+        //self.refreshControl?.attributedTitle = NSAttributedString(string: "당겨서 새로고침")
+        self.refreshControl?.addTarget(self, action: #selector(pullToRefresh(_:)), for: .valueChanged)
+        
+        self.loadingImg = UIImageView(image: UIImage(named: "refresh"))
+        self.loadingImg.center.x = (self.refreshControl?.frame.width)! / 2
+        self.refreshControl?.tintColor = UIColor.clear
+        self.refreshControl?.addSubview(self.loadingImg)
+        
+        self.bgCircle = UIView()
+        self.bgCircle.backgroundColor = UIColor.yellow
+        self.bgCircle.center.x = (self.refreshControl?.frame.width)! / 2
+        
+        self.refreshControl?.addSubview(self.bgCircle)
+        self.refreshControl?.bringSubviewToFront(self.loadingImg)
+        
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let distance = max(0.0, -(self.refreshControl?.frame.origin.y)!)
+        self.loadingImg.center.y = distance/2
+        
+        let ts = CGAffineTransform(rotationAngle: CGFloat(distance/20))
+        self.loadingImg.transform = ts
+        
+        self.bgCircle.center.y = distance / 2
+    }
+    
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        self.bgCircle.frame.size.width = 0
+        self.bgCircle.frame.size.height = 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,8 +116,13 @@ class EmployeeListVC: UITableViewController {
             param.stateCd = EmpStateType.ING
             
             if self.empDAO.create(param: param) {
-                let navTitle = self.navigationItem.titleView as! UILabel
-                navTitle.text = "사원목록 \n" + " 총 \(self.empList.count) 개"
+                
+                self.empList = self.empDAO.find()
+                self.tableView.reloadData()
+                
+                if let navTitle = self.navigationItem.titleView as? UILabel {
+                    navTitle.text = "사원목록 \n" + " 총 \(self.empList.count) 개"
+                }
             }
         })
         self.present(alert, animated: false)
@@ -95,6 +134,23 @@ class EmployeeListVC: UITableViewController {
         } else {
             self.setEditing(false, animated: true)
             (sender as? UIBarButtonItem)?.title = "Edit"
+        }
+    }
+    
+    @objc
+    func pullToRefresh(_ sender: Any) {
+        self.empList = self.empDAO.find()
+        self.tableView.reloadData()
+        
+        self.refreshControl?.endRefreshing()
+        
+        let distance = max(0.0, -(self.refreshControl?.frame.origin.y)!)
+        UIView.animate(withDuration: 0.5) {
+            self.bgCircle.frame.size.width = 80
+            self.bgCircle.frame.size.height = 80
+            self.bgCircle.center.x = (self.refreshControl?.frame.width)! / 2
+            self.bgCircle.center.y = distance / 2
+            self.bgCircle.layer.cornerRadius = (self.bgCircle?.frame.size.width)! / 2
         }
     }
 }
